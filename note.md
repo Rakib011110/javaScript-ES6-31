@@ -96,15 +96,70 @@ console.log(num);
 
 <details>
 <summary>
-  <h3>What is ? (Click Me)</h3>
+  <h3>spread operator ? (Click Me)</h3>
 </summary>
 <br >
 
-```js
+- The spread operator is a feature introduced in ECMAScript 6 (ES6) that allows an iterable (such as an array or a string) to be expanded into individual elements. In the context of arrays, the spread operator can be used to copy an array, concatenate arrays, and pass arrays as arguments to functions.
 
+- Here are some examples of using the spread operator with arrays:
+
+- 1 Copy an array:
+
+```js
+const arr1 = [1, 2, 3];
+const arr2 = [...arr1]; // create a copy of arr1
+console.log(arr2); // Output: [1, 2, 3]
+```
+
+- In this example, the spread operator is used to create a new array arr2 that contains all the elements of arr1.
+
+- 2. Concatenate arrays:
+
+```js
+const arr1 = [1, 2];
+const arr2 = [3, 4];
+const arr3 = [...arr1, ...arr2]; // concatenate arr1 and arr2
+console.log(arr3); // Output: [1, 2, 3, 4]
+```
+
+- In this example, the spread operator is used to create a new array arr3 that contains all the elements of arr1 and arr2.
+
+- 3.Pass arrays as arguments to a function
+
+```js
+const arr1 = [1, 2, 3];
+const max = Math.max(...arr1); // find the maximum element in arr1
+console.log(max); // Output: 3
+```
+
+- In this example, the spread operator is used to pass the elements of arr1 as individual arguments to the Math.max function, which returns the maximum value in the array.
+
+more example:
+
+```js
+const max = Math.max(12, 45, 54, 56);
+
+// console.log(max);
+const numbers = [44, 43, 42, 21, 24, 65];
+const largest = Math.max(...numbers);
+
+// console.log(...numbers);
+// console.log(largest);
+
+const numbers2 = [...numbers];
+numbers.push(43);
+// console.log(numbers);
+// console.log(numbers2);
+
+const number3 = [...numbers];
+
+const numbers4 = [434, 5, 45, ...number3, 434];
+console.log(numbers4);
 ```
 
 </details>
+
 - [js type](#js-type)
 
 ### demo
